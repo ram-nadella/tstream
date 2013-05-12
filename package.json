@@ -1,0 +1,26 @@
+{
+    "name": "tstream",
+    "version": "0.0.1",
+    "author": {
+        "name": "Ram Nadella",
+        "email": "ram.nadella@live.com"
+    },
+    "description": "A Twitter streaming API client",
+    "main": "./lib/tstream.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nodejitsu/http-server.git"
+    },
+    "keywords": [
+        "Twitter",
+        "Twitter streaming API"
+    ],
+    "dependencies": {
+        "oauth": "latest",
+        "lodash": "latest"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">=0.6"
+    }
+}
