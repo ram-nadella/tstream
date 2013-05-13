@@ -16,6 +16,7 @@ https://dev.twitter.com/docs/streaming-apis/messages#Stall_warnings_warning
 eg. disconnect
 
 Twitter will pass this message in the HTTP stream
+```json
 {
   "disconnect":{
     "code": 4,
@@ -23,6 +24,7 @@ Twitter will pass this message in the HTTP stream
     "reason":"< Human readable status message >"
   }
 }
+```
 
 You can listen to it in your code as follows
 stream.on("disconnect", function(data){});
@@ -37,7 +39,7 @@ https://dev.twitter.com/docs/streaming-apis/messages#Events_event
 
 ## Usage
 
-```
+```js
 var TStream = require('tstream'),
     config = require('./config.js');
 
