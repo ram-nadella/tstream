@@ -9,7 +9,7 @@
     "main": "./lib/tstream.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/nodejitsu/http-server.git"
+        "url": "https://github.com/ram-nadella/tstream.git"
     },
     "keywords": [
         "Twitter",
