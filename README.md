@@ -27,13 +27,13 @@ Twitter will pass this message in the HTTP stream
 ```
 
 You can listen to it in your code as follows
-stream.on("disconnect", function(data){});
+`stream.on("disconnect", function(data){});`
 
 data will contain what Twitter sent as the "disconnect" object
 
-Stall warnings is another useful one, listen to a warning event
+Stall warnings is another useful one, listen to a "warning" event
 
-If you are dealing with user streams, listen to the "user-event" event to be
+If you are dealing with user streams, listen to a "user-event" to be
 notified about all the events listed here
 https://dev.twitter.com/docs/streaming-apis/messages#Events_event
 
@@ -60,8 +60,6 @@ tstream.stream('statuses/filter', {'track': ['what']}, function(stream) {
 });
 ```
 
-Make sure to create another file in the same directory, call it config.js
-it should export a config object and a config.twitter object that contains
-the credentials (access_token etc)
+Pass an object that contains "consumer_key", "consumer_secret", "access_token_key", "access_token_secret" to the TStream constructor. The example code above assumes there is a file in the same directory, called config.js that exports a config object that has a twitter key which again is an object that contains the credentials (access_token etc)
 
 * TODO: write better docs
