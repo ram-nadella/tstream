@@ -51,8 +51,16 @@ tstream.stream('statuses/filter', {'track': ['what']}, function(stream) {
     stream.on('error', function(error) {
         console.log('stream error - ' + error.message);
     });
-    stream.on('disconnect', function(data) {
-        console.log(data);
+    // will be fired when the Twitter streams sends a stall_warning
+    // https://dev.twitter.com/docs/streaming-apis/messages#Stall_warnings_warning
+    stream.on('warning', function (data) {
+        console.log('Twitter stream warning - ' + data);
+    });
+
+    // will be fired when the stream is being disconneced by Twitter
+    // https://dev.twitter.com/docs/streaming-apis/messages#Disconnect_messages_disconnect
+    stream.on('disconnect', function (data) {
+        console.log('Twitter stream disconnected - ' + data);
     });
     stream.on('end', function() {
         console.log('stream ended');
