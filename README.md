@@ -4,7 +4,7 @@ Twitter streaming API client
 
 * API compliant with ntwitter
 
-ntwitter is a great Twitter client, does a whole log of things, but hasn't seen updates in
+[ntwitter](https://github.com/AvianFlu/ntwitter) is a great Twitter client, does a whole log of things, but hasn't seen updates in
 nearly a year and their streaming API implementation is very  limited.
 
 tstream goes a step further and let's you listen to a lot more events
